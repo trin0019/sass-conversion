@@ -1,0 +1,27 @@
+//@MEDIA-MOBILE VIEW.
+@mixin media-small($min-wth, $max-wth){
+    @media all and (min-width:$min-wth) and (max-width:$max-wth){
+        @content;
+    }
+}
+
+//@MEDIA-DESKTOP VIEW.
+@mixin media-medium($min-wth, $max-wth){
+    @media all and (min-width:$min-wth) and (max-width:$max-wth){
+        @content;
+    }
+}
+
+//@MEDIA-LARGE DESKTOP VIEW.
+@mixin media-large($min-wth){
+    @media all and (min-width:$min-wth){
+        @content;
+    }
+}
+
+
+
+
+
+
+

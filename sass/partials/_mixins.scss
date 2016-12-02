@@ -1,0 +1,125 @@
+//DEFAULTS
+//*
+@mixin all {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//LAYOUT.
+//.bg-header
+@mixin bg-header {    
+    background-color: $white;
+    background-color: $ltblue;;
+    color: $dkgrey;
+    border-bottom: 1rem solid $mdblue;
+    border-top: 1rem solid $dkblue;
+    position: relative;
+}
+
+//.bg-header:before,.bg-header:after
+@mixin be-af{
+    content:"";
+    position: absolute;
+    bottom: -1rem;
+    width: 30%;
+    height: 1rem;
+    background-color: $dkblue;
+}
+
+//header
+@mixin head{
+    width: $px4; /* default */
+    margin: 0 auto;
+    position: relative;
+}
+
+//.col-2
+@mixin col2{
+    width: 50%;
+    float: left;
+    padding-bottom: 2rem;
+    border-left: 1px solid $dkblue;
+    margin-bottom: 2rem;  
+}
+
+//NAVIGATION.
+
+//nav>ul>li>a
+@mixin nula{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $dkgrey;    
+    font-size: $font14;
+    letter-spacing: 0.25rem;
+    border: 1px solid $ltgrey; 
+    border-bottom: none;
+    padding: 1.0rem 2rem;
+    line-height: 1;
+    background-color: $white;
+}
+
+//CONTENT
+//header h1 i.fa-lg
+@mixin falg{
+    display: block;
+    width: 25%;
+    float: left;
+    font-size: 7rem;
+    line-height: 12.7936rem;
+    color: $ltbrown;
+}
+//header h1 i.fa-lg ~ span
+@mixin span{
+    float: right;
+    width: 75%;
+    font-size: 3.998rem;
+    /**
+    2 lines of 3.998 * 1.6 = 12.7936
+    **/
+    padding-left: 1rem;
+    text-align: right;
+}
+
+//.focal h2
+@mixin focalh2{
+    font-size: $font19;
+    line-height: 1.2;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+//font-size and padding.
+@mixin font-pad($font, $pad){
+    font-size: $font;
+    padding: $pad;  
+}
+
+//.content1 h3 i
+@mixin h3i{
+    vertical-align: middle;
+    padding-right: 2rem;   
+}
+
+//mobile header h1 i.falg
+@mixin media-ifalg($color){
+    display:inline;
+    color: $color;
+    vertical-align:baseline;
+    float:none;
+    font-size: 4rem;
+    line-height: 6.3968rem;
+}
+
+//Media nav ul li a.
+@mixin media-navula($font){
+    font-size: $font;
+    line-height: 2rem;
+    min-height: 2rem;
+    border:none;
+    border-left:1px solid $ltgrey; 
+    padding:0 1.0rem;
+    margin:1.0rem 0;
+    background-color: $white;  
+}
