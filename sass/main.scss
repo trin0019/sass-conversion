@@ -2,6 +2,8 @@
 @import "partials/variables";
 @import "partials/mixins";
 
+
+
 //Main css file.
 * {
     @include all;
@@ -82,17 +84,21 @@ header{
         float: none;
     } 
 }
-section{
-    &.focal{
-        width: $px4;
-        margin: 0 auto;
-    }
+section.focal{
+    width: $px4;
+    margin: 0 auto;
 }
 section.content1{
+    margin: 0 auto;
     padding: $pad;    
 }
 section.content2{
     @extend section.content1; 
+}
+section.focal h2,
+section p.author{
+    width: 600px; 
+    margin: 0 auto;
 }
 .row{
     clear: both;
@@ -103,7 +109,7 @@ section.content2{
 footer{
     padding: $pad;
     .col-2:first-child{
-        border-left: 0;
+     border-left: 0;
     }
     p:last-child{
     }
@@ -172,7 +178,6 @@ header h1{
         @include font-pad($font14, 0.5rem 2rem);
     }
 }
-
 
 
 //FOOTER
